@@ -1,0 +1,32 @@
+---
+import Hero from "../../components/Hero.astro";
+import PhylumInfo from "../../components/PhylumInfo.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { phylum: "PROTOZOARIO" } },
+    { params: { phylum: "PORIFERO" } },
+    { params: { phylum: "CNIDARIO" } },
+    { params: { phylum: "CTENOFORO" } },
+    { params: { phylum: "PLATELMINTO" } },
+    { params: { phylum: "NEMERTINO" } },
+    { params: { phylum: "ASQUELMINTO" } },
+    { params: { phylum: "ACANTOCEFALO" } },
+    { params: { phylum: "MOLUSCO" } },
+    { params: { phylum: "ANELIDO" } },
+    { params: { phylum: "ARTROPODO" } },
+    { params: { phylum: "EQUINODERMO" } },
+    { params: { phylum: "CORDADO" } },
+  ];
+}
+
+const { phylum } = Astro.params;
+---
+
+<Layout selected="explore">
+  <main class="flex flex-col items-center">
+    <Hero page={2} />
+    <PhylumInfo {phylum} />
+  </main>
+</Layout>

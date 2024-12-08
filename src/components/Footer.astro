@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import logoUdo from "../../public/logo-udo.webp";
+---
+
+<footer
+  class="flex flex-row items-center justify-center text-center gap-4 text-lg font-semibold mx-5"
+>
+  Una iniciativa de los estudiantes de la UDONE
+  <!-- <img class="max-h-[50px]" src="./logo-udo.webp" alt="Logo de la UDONE" /> -->
+  <Image src={logoUdo} alt="Logo de la UDONE" class="h-[50px] w-[50px]" />
+</footer>

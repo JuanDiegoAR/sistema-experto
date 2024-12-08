@@ -1,0 +1,34 @@
+---
+interface Props {
+  selected: string;
+}
+
+const { selected } = Astro.props;
+---
+
+<header class="flex w-full items-center justify-center mt-[30px]">
+  <nav
+    class="flex w-[330px] shadow-stable rounded-[25px] items-center justify-center p-2"
+  >
+    <ul class="flex flex-row gap-2">
+      <a href="/">
+        <li
+          class={selected === "identify"
+            ? "flex flex-col font-bold w-[150px] h-[40px] justify-center text-center text-white bg-[#156703] rounded-3xl hover:cursor-pointer select-none"
+            : "flex flex-col font-bold w-[150px] h-[40px] justify-center text-center bg-[#EFEFEF] rounded-3xl hover:cursor-pointer select-none"}
+        >
+          IDENTIFICAR
+        </li>
+      </a>
+      <a href="/explore">
+        <li
+          class={selected === "explore"
+            ? "flex flex-col font-bold w-[150px] h-[40px] justify-center text-center text-white bg-[#156703] rounded-3xl hover:cursor-pointer select-none"
+            : "flex flex-col font-bold w-[150px] h-[40px] justify-center text-center bg-[#EFEFEF] rounded-3xl hover:cursor-pointer select-none"}
+        >
+          EXPLORAR
+        </li>
+      </a>
+    </ul>
+  </nav>
+</header>
