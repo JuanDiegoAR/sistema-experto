@@ -1,12 +1,12 @@
 ---
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import ContentIdentify from "../components/ContentIdentify.astro";
+import { Content } from "@/components/ContentIdentify";
 ---
 
 <Layout selected="identify">
   <main class="flex flex-col items-center">
     <Hero page={1} />
-    <ContentIdentify phase="none" />
+    <Content client:visible />
   </main>
 </Layout>
