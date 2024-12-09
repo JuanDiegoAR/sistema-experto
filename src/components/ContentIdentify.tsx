@@ -1,103 +1,87 @@
 import { useEffect, useState } from "react";
 import { Options } from "@/components/Options";
+import { Result } from "./Result";
 
 export function Content() {
   const [selected, setSelected] = useState("none");
   const [phase, setPhase] = useState("none");
 
+  useEffect(() => {
+    console.log(selected);
+    console.log(phase);
+  }, [selected]);
+
   useEffect(() => {}, [phase]);
 
   const handleClickNone = () => {
     setPhase("celulas");
-    setSelected("none");
   };
 
   const handleClickCelulaUnicelular = () => {
     setPhase("protozoario");
-    setSelected("none");
   };
 
   const handleClickCelulaMulticelular = () => {
     setPhase("tejidos");
-    setSelected("none");
   };
 
   const handleClickTejidoNoVerdadero = () => {
     setPhase("porifero");
-    setSelected("none");
   };
 
   const handleClickTejidoVerdadero = () => {
     setPhase("simetria");
-    setSelected("none");
   };
   const handleClickRadial = () => {
     setPhase("radiados");
-    setSelected("none");
   };
   const handleClickBilateral = () => {
     setPhase("celoma");
-    setSelected("none");
   };
   const handleClickSecundaria = () => {
     setPhase("equinodermos");
-    setSelected("none");
   };
   const handleClickCelomaNulo = () => {
     setPhase("acelomados");
-    setSelected("none");
   };
   const handleClickCelomaParcial = () => {
     setPhase("pseudocelomados");
-    setSelected("none");
   };
   const handleClickCelomaCompleto = () => {
     setPhase("celomados");
-    setSelected("none");
   };
   const handleClickCuerpo = () => {
     setPhase("hendiduras");
-    setSelected("none");
   };
   const handleClickSDCompleto = () => {
     setPhase("nemertinos");
-    setSelected("none");
   };
   const handleClickSDIncompleto = () => {
     setPhase("platelmintos");
-    setSelected("none");
   };
   const handleClickSDExistente = () => {
     setPhase("acantocefalos");
-    setSelected("none");
   };
   const handleClickSDCarente = () => {
     setPhase("asquelmintos");
-    setSelected("none");
   };
   const handleClickCordados = () => {
     setPhase("cordados");
-    setSelected("none");
   };
   const handleClickMoluscos = () => {
     setPhase("moluscos");
-    setSelected("none");
   };
   const handleClickAnelidos = () => {
     setPhase("anelidos");
-    setSelected("none");
   };
   const handleClickArtropodos = () => {
     setPhase("artropodos");
-    setSelected("none");
   };
   const handleClickCnidario = () => {
     setPhase("artropodos");
-    setSelected("none");
   };
   const handleClickCtenoforo = () => {
     setPhase("artropodos");
-    setSelected("none");
   };
 
   return phase === "none" ? (
@@ -118,7 +102,7 @@ export function Content() {
         El nivel de organización celular se refiere a la complejidad de los
         organismos en relación con sus células
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -126,7 +110,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "unicelular"
+            selected === "UNICELULAR"
               ? handleClickCelulaUnicelular
               : handleClickCelulaMulticelular
           }
@@ -135,6 +119,32 @@ export function Content() {
         </button>
       </footer>
     </section>
+  ) : phase === "protozoario" ? (
+    <Result phylum="PROTOZOARIO" />
+  ) : phase === "porifero" ? (
+    <Result phylum="PORIFERO" />
+  ) : phase === "nemertinos" ? (
+    <Result phylum="NEMERTINO" />
+  ) : phase === "platelmintos" ? (
+    <Result phylum="PLATELMINTO" />
+  ) : phase === "asquelmintos" ? (
+    <Result phylum="ASQUELMINTO" />
+  ) : phase === "acantocefalos" ? (
+    <Result phylum="ACANTOCEFALO" />
+  ) : phase === "moluscos" ? (
+    <Result phylum="MOLUSCO" />
+  ) : phase === "anelidos" ? (
+    <Result phylum="ANELIDO" />
+  ) : phase === "artropodo" ? (
+    <Result phylum="ARTROPODO" />
+  ) : phase === "equinodermos" ? (
+    <Result phylum="EQUINODERMO" />
+  ) : phase === "cordados" ? (
+    <Result phylum="CORDADOS" />
+  ) : phase === "cnidarios" ? (
+    <Result phylum="CNIDARIOS" />
+  ) : phase === "ctenaforos" ? (
+    <Result phylum="CTENOFOROS" />
   ) : phase === "tejidos" ? (
     <section className="flex flex-col w-[80%] min-h-[560px] rounded-[45px] shadow-stable mb-[77px] py-8">
       <h2 className="flex self-center font-bold text-3xl mb-3">
@@ -144,7 +154,7 @@ export function Content() {
         La organización tisular se refiere a la manera en la cual las células se
         agrupan para formar tejidos en organismos multicelulares
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -152,7 +162,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "verdaderos"
+            selected === "CON TEJIDOS VERDADEROS"
               ? handleClickTejidoVerdadero
               : handleClickTejidoNoVerdadero
           }
@@ -170,7 +180,7 @@ export function Content() {
         La simetría de un organismo se refiere a cómo las partes de su cuerpo
         están organizadas en relación con un eje o plano central
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -178,9 +188,9 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "radial"
+            selected === "RADIAL"
               ? handleClickRadial
-              : selected === "bilateral"
+              : selected === "BILATERAL"
               ? handleClickBilateral
               : handleClickSecundaria
           }
@@ -198,7 +208,7 @@ export function Content() {
         El celoma es una cavidad corporal llena de líquido, completamente
         revestida por tejido derivado del mesodermo
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -206,9 +216,9 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "celomado"
+            selected === "COMPLETO"
               ? handleClickCelomaCompleto
-              : selected === "pseudocelomado"
+              : selected === "PARCIAL"
               ? handleClickCelomaParcial
               : handleClickCelomaNulo
           }
@@ -227,7 +237,7 @@ export function Content() {
         los alimentos para extraer y absorber los nutrientes necesarios para el
         cuerpo
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -235,7 +245,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "completo"
+            selected === "COMPLETO"
               ? handleClickSDCompleto
               : handleClickSDIncompleto
           }
@@ -254,7 +264,7 @@ export function Content() {
         los alimentos para extraer y absorber los nutrientes necesarios para el
         cuerpo
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -262,7 +272,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "existente"
+            selected === "EXISTENTE"
               ? handleClickSDExistente
               : handleClickSDCarente
           }
@@ -280,7 +290,7 @@ export function Content() {
         El celoma es una cavidad corporal llena de líquido completamente
         revestida por tejido mesodérmico
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -288,7 +298,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "hendidura" ? handleClickCuerpo : handleClickCordados
+            selected === "HENDIDURAS" ? handleClickCuerpo : handleClickCordados
           }
         >
           SIGUIENTE
@@ -304,7 +314,7 @@ export function Content() {
         El cuerpo de un organismo puede tener diversas estructuras para soporte
         y protección
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -312,9 +322,9 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "manto"
+            selected === "MANTO Y CONCHA"
               ? handleClickMoluscos
-              : selected === "hidrostatico"
+              : selected === "HIDROSQUELETO"
               ? handleClickAnelidos
               : handleClickArtropodos
           }
@@ -333,7 +343,7 @@ export function Content() {
         los alimentos para extraer y absorber los nutrientes necesarios para el
         cuerpo
       </p>
-      <Options phase={phase} />
+      <Options phase={phase} updateSelected={setSelected} />
       <footer className="flex flex-row gap-20 justify-center w-full">
         <button className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]">
           ATRÁS
@@ -341,7 +351,7 @@ export function Content() {
         <button
           className="flex justify-center items-center w-[250px] h-[50px] text-xl font-medium shadow-stable rounded-[12.5px]"
           onClick={
-            selected === "completo" ? handleClickCnidario : handleClickCtenoforo
+            selected === "COMPLETO" ? handleClickCnidario : handleClickCtenoforo
           }
         >
           SIGUIENTE
