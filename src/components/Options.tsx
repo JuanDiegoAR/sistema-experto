@@ -2,10 +2,11 @@ import { OptionCard } from "@/components/OptionCard";
 
 interface Props {
   phase: string;
+  selected: string;
   updateSelected: (newSelected: string) => void;
 }
 
-export function Options({ phase, updateSelected }: Props) {
+export function Options({ phase, updateSelected, selected }: Props) {
   return phase === "celulas" ? (
     <div className="flex flex-row w-full justify-center gap-20">
       <OptionCard
@@ -15,6 +16,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="UNICELULAR"
         description="Son organismos compuestos por una sola célula que realiza todas las funciones vitales"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -23,6 +25,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="MULTICELULAR"
         description="Son organismos formados por múltiples células que se especializan en diferentes funciones"
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "tejidos" ? (
@@ -34,6 +37,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="SIN TEJIDOS VERDADEROS"
         description="Las celulas funcionan de forma más independiente y no forman estructuras definidas"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -42,6 +46,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="CON TEJIDOS VERDADEROS"
         description="Las células formas estructuras definidas para realizar funciones complejas"
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "simetria" ? (
@@ -53,6 +58,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="RADIAL"
         description="Cualquier corte longitudinal a lo largo del eje central produce mitades similares"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -61,6 +67,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="BILATERAL"
         description="El cuerpo se divide en mitades izquierda y derecha por un único plano de simetría"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -69,6 +76,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="RADIAL SECUNDARIA"
         description="En su etapa larval, muestra simetría bilateral, pero desarrolla simetría radial en su etapa adulta"
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "celoma" ? (
@@ -80,6 +88,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="NULO"
         description="No tienen una cavidad corporal. Sus órganos están situados directamente en el tejido sin una cavidad separada"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -88,6 +97,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="PARCIAL"
         description="Poseen una cavidad corporal, llamada pseudoceloma, que no está completamente revestida por el mesodermo"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -96,6 +106,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="COMPLETO"
         description="Tienen un celoma verdadero, una cavidad corporal completamente revestida por mesodermo en ambos lados"
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "acelomados" ? (
@@ -107,6 +118,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="COMPLETO"
         description="Tiene una apertura en la boca para entrada de alimentos y otra en el ano para salida de desechos."
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -115,6 +127,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="INCOMPLETO"
         description="Tiene una única abertura que sirve tanto para la entrada de alimentos como para la expulsión de los desechos."
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "pseudocelomados" ? (
@@ -126,6 +139,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="EXISTENTE"
         description="Consiste en un conjunto de órganos que permiten la ingestión, digestión, absorción y excreción de alimentos."
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -134,6 +148,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="CARENTE"
         description="Algunos organismos no tienen un sistema digestivo. Absorben nutrientes directamente a través de sus paredes celulares."
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "celomados" ? (
@@ -145,6 +160,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="HENDIDURAS"
         description="El mesodermo se desplaza y se separa en bloques que eventualmente se ahuecan para formar el celoma."
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -153,6 +169,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="EVAGINACIONES"
         description="El mesodermo forma sacos del intestino embrionario que se expanden y desprenden para formar el celoma."
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "hendiduras" ? (
@@ -164,6 +181,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="MANTO Y CONCHA"
         description="El manto es una capa de tejido que secreta la concha en moluscos"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -172,6 +190,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="HIDROSQUELETO"
         description="Se basa en la presión del líquido dentro de una cavidad cerrada para mantener la forma y facilitar el movimiento"
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -180,6 +199,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="EXOESQUELETO"
         description="Un revestimiento externo rígido que protege y soporta el cuerpo"
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : phase === "radiados" ? (
@@ -191,6 +211,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="COMPLETO"
         description="Tiene una apertura en la boca para entrada de alimentos y otra en el ano para salida de desechos."
         updateSelected={updateSelected}
+        selected={selected}
       />
       <OptionCard
         option=""
@@ -199,6 +220,7 @@ export function Options({ phase, updateSelected }: Props) {
         title="INCOMPLETO"
         description="Tiene una única abertura que sirve tanto para la entrada de alimentos como para la expulsión de los desechos."
         updateSelected={updateSelected}
+        selected={selected}
       />
     </div>
   ) : (

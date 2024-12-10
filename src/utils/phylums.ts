@@ -1,7 +1,10 @@
+import { images } from "./images";
+
 export const phylums = [
   {
+    id: 0,
     title: "PROTOZOARIO",
-    image: "/logo-udo.webp",
+    image: "/PROTOZOARIO.png",
     tags: ["UNICELULAR"],
     description: [
       "El phylum Protozoario incluye organismos unicelulares eucariotas que se encuentran en ambientes acuáticos y húmedos. Estos organismos son extremadamente diversos y pueden vivir de forma libre o como parásitos.",
@@ -9,8 +12,9 @@ export const phylums = [
     ],
   },
   {
+    id: 1,
     title: "PORIFERO",
-    image: "/logo-udo.webp",
+    image: "/PORIFERO.png",
     tags: ["MULTICELULAR", "PARAZOARIOS"],
     description: [
       "El phylum Porífero incluye a las esponjas, organismos multicelulares que viven principalmente en ambientes acuáticos, tanto marinos como de agua dulce. Son sencillos y carecen de tejidos verdaderos y órganos.",
@@ -19,18 +23,20 @@ export const phylums = [
     ],
   },
   {
+    id: 2,
     title: "NEMERTINO",
-    image: "/logo-udo.webp",
+    image: "/NEMERTINO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "ACELOMADO"],
     description: [
       "El phylum Nemertino incluye gusanos conocidos como nemertinos o gusanos cinta. Son organismos acuáticos, mayormente marinos, caracterizados por su cuerpo alargado, aplanado y sin segmentación.",
-      "Poseen un sistema digestivo completo y un probóscide eversible que usan para capturar presas. Los nemertinos tienen un sistema circulatorio cerrado, lo que es raro entre los invertebrados.",
+      "Poseen un sistema digestivo completo y un probóscide eversible que usan para capturar presas. ",
       "Son importantes en la cadena alimentaria marina y exhiben gran diversidad de formas y tamaños, adaptados a diferentes hábitats acuáticos.",
     ],
   },
   {
+    id: 3,
     title: "PLATELMINTO",
-    image: "/logo-udo.webp",
+    image: "/PLATELMINTO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "ACELOMADO"],
     description: [
       "El phylum Platelminto incluye gusanos planos, como las planarias, trematodos y tenias. Son organismos invertebrados de cuerpo aplanado dorsoventralmente y sin segmentación.",
@@ -39,8 +45,9 @@ export const phylums = [
     ],
   },
   {
+    id: 4,
     title: "ASQUELMINTO",
-    image: "/logo-udo.webp",
+    image: "/ASQUELMINTO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "PESUDOCELOMADO"],
     description: [
       "El phylum Asquelminto, también conocidos como nemátodos, incluye gusanos redondos y cilíndricos que pueden vivir en hábitats acuáticos, terrestres o como parásitos en plantas y animales.",
@@ -49,8 +56,9 @@ export const phylums = [
     ],
   },
   {
+    id: 5,
     title: "ACANTOCEFALO",
-    image: "/logo-udo.webp",
+    image: "/ACANTOCEFALO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "PESUDOCELOMADO"],
     description: [
       "El phylum Acantocéfalo agrupa a gusanos parásitos conocidos por sus ganchos en la probóscide, que utilizan para fijarse a las paredes intestinales de sus huéspedes.",
@@ -59,8 +67,9 @@ export const phylums = [
     ],
   },
   {
+    id: 6,
     title: "MOLUSCO",
-    image: "/logo-udo.webp",
+    image: "/MOLUSCO.png",
     tags: [
       "MULTICELULAR",
       "EUMETAZOARIO",
@@ -75,8 +84,9 @@ export const phylums = [
     ],
   },
   {
+    id: 7,
     title: "ANELIDO",
-    image: "/logo-udo.webp",
+    image: "/ANELIDO.png",
     tags: [
       "MULTICELULAR",
       "EUMETAZOARIO",
@@ -91,8 +101,9 @@ export const phylums = [
     ],
   },
   {
+    id: 8,
     title: "ARTROPODO",
-    image: "/logo-udo.webp",
+    image: "/ARTROPODO.png",
     tags: [
       "MULTICELULAR",
       "EUMETAZOARIO",
@@ -107,8 +118,9 @@ export const phylums = [
     ],
   },
   {
+    id: 9,
     title: "EQUINODERMO",
-    image: "/logo-udo.webp",
+    image: "/EQUINODERMO.png",
     tags: [
       "MULTICELULAR",
       "EUMETAZOARIO",
@@ -122,8 +134,9 @@ export const phylums = [
     ],
   },
   {
+    id: 10,
     title: "CORDADO",
-    image: "/logo-udo.webp",
+    image: "/CORDADO.png",
     tags: [
       "MULTICELULAR",
       "EUMETAZOARIO",
@@ -138,8 +151,9 @@ export const phylums = [
     ],
   },
   {
+    id: 11,
     title: "CNIDARIO",
-    image: "/logo-udo.webp",
+    image: "/CNIDARIO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "RADIADO"],
     description: [
       "El phylum Cnidario agrupa organismos acuáticos como medusas, corales y anémonas. Se caracterizan por poseer cnidocitos, células especializadas con nematocistos para capturar presas y defenderse.",
@@ -148,8 +162,9 @@ export const phylums = [
     ],
   },
   {
+    id: 12,
     title: "CTENOFORO",
-    image: "/logo-udo.webp",
+    image: "/CTENOFORO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "RADIADO"],
     description: [
       "El phylum Ctenóforo incluye organismos marinos conocidos como medusas peine. Se caracterizan por tener ocho filas de cilios en forma de peines que utilizan para la locomoción.",

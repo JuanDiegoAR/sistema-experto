@@ -1,26 +1,25 @@
 ---
-import { Image } from "astro:assets";
-import logoUdo from "./public/logo-udo.webp";
+import { phylums } from "@/utils/phylums";
 
 interface Props {
   phylum: string;
 }
 
 const { phylum } = Astro.props;
+
+const finded = phylums.find((t) => phylum === t.title);
+const img = finded?.image;
 ---
 
 <a href=`/explore/${phylum}`>
   <button
-    transition:name=`body-img-${phylum}`
+    transition:name=`img-${phylum}`
     class="flex flex-col w-[175px] h-[175px] items-center justify-center p-5 gap-3 rounded-2xl shadow-stable hover:scale-110 duration-500 transition"
   >
     <!-- <img src="/logo-udo.webp" alt="Phylum" class="h-[100px] w-[100px]" /> -->
-    <Image
-      transition:name=`img-${phylum}`
-      src={logoUdo}
-      alt="Logo de la Udone"
-      class="h-[100px] w-[100px]"
-    />
-    <h3 class="text-xl font-semibold">PROTOZOARIO</h3>
+    <img src={img} alt=`Imagen de un ${phylum}` class="h-[100px] w-[100px]" />
+    <h3 class="text-xl font-semibold">
+      {phylum}
+    </h3>
   </button>
 </a>
