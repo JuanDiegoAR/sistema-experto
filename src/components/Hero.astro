@@ -3,29 +3,35 @@ interface Props {
   page: number;
 }
 
+let content = {
+  title: "",
+  description: "",
+};
+
 const { page } = Astro.props;
+page === 1
+  ? (content = {
+      title: "IDENTIFICACIÓN DE",
+      description:
+        "A través de esta experiencia podrás comprender a qué phyllum pertenece un organismo",
+    })
+  : (content = {
+      title: "DESCUBRE LOS DISTINTOS TIPOS DE",
+      description:
+        "En esta sección podrás explorar los diferentes tipos de phyllum",
+    });
 ---
 
-{
-  page === 1 ? (
-    <section class="flex flex-col items-center justify-center align-middle text-center my-[77px] gap-4 m-5">
-      <h1 class="text-4xl font-bold">
-        IDENTIFICACIÓN DE <span class="text-[#197903]">PHYLLUM</span>
-      </h1>
-      <p class="text-[20px] self-center">
-        A través de esta experiencia podrás comprender a qué phyllum pertenece
-        un organismo
-      </p>
-    </section>
-  ) : (
-    <section class="flex flex-col items-center justify-center text-center my-[77px] gap-4 m-5">
-      <h1 class="text-4xl font-bold">
-        DESCUBRE LOS DISTINTOS TIPOS DE
-        <span class="text-[#197903]">PHYLLUM</span>
-      </h1>
-      <p class="text-[20px]">
-        En esta sección podrás explorar los diferentes tipos de phyllum
-      </p>
-    </section>
-  )
-}
+{}
+
+<section
+  class="flex flex-col items-center justify-center align-middle text-center my-[40px] gap-4 m-5"
+>
+  <h1 class="text-3xl font-bold text-pretty">
+    {content.title}
+    <span class="text-[#197903]">PHYLLUM</span>
+  </h1>
+  <p class="text-md self-center text-pretty">
+    {content.description}
+  </p>
+</section>

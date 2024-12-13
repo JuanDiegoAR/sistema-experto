@@ -1,8 +1,6 @@
-import { images } from "./images";
-
 export const phylums = [
   {
-    id: 0,
+    id: "protozoario",
     title: "PROTOZOARIO",
     image: "/PROTOZOARIO.png",
     tags: ["UNICELULAR"],
@@ -12,7 +10,7 @@ export const phylums = [
     ],
   },
   {
-    id: 1,
+    id: "porifero",
     title: "PORIFERO",
     image: "/PORIFERO.png",
     tags: ["MULTICELULAR", "PARAZOARIOS"],
@@ -23,7 +21,7 @@ export const phylums = [
     ],
   },
   {
-    id: 2,
+    id: "nemertino",
     title: "NEMERTINO",
     image: "/NEMERTINO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "ACELOMADO"],
@@ -34,7 +32,7 @@ export const phylums = [
     ],
   },
   {
-    id: 3,
+    id: "platelminto",
     title: "PLATELMINTO",
     image: "/PLATELMINTO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "ACELOMADO"],
@@ -45,7 +43,7 @@ export const phylums = [
     ],
   },
   {
-    id: 4,
+    id: "asquelminto",
     title: "ASQUELMINTO",
     image: "/ASQUELMINTO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "PESUDOCELOMADO"],
@@ -56,7 +54,7 @@ export const phylums = [
     ],
   },
   {
-    id: 5,
+    id: "acantocefalo",
     title: "ACANTOCEFALO",
     image: "/ACANTOCEFALO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "BILATERIO", "PESUDOCELOMADO"],
@@ -67,7 +65,7 @@ export const phylums = [
     ],
   },
   {
-    id: 6,
+    id: "molusco",
     title: "MOLUSCO",
     image: "/MOLUSCO.png",
     tags: [
@@ -84,7 +82,7 @@ export const phylums = [
     ],
   },
   {
-    id: 7,
+    id: "anelido",
     title: "ANELIDO",
     image: "/ANELIDO.png",
     tags: [
@@ -101,7 +99,7 @@ export const phylums = [
     ],
   },
   {
-    id: 8,
+    id: "artropodo",
     title: "ARTROPODO",
     image: "/ARTROPODO.png",
     tags: [
@@ -118,7 +116,7 @@ export const phylums = [
     ],
   },
   {
-    id: 9,
+    id: "equinodermo",
     title: "EQUINODERMO",
     image: "/EQUINODERMO.png",
     tags: [
@@ -134,7 +132,7 @@ export const phylums = [
     ],
   },
   {
-    id: 10,
+    id: "cordado",
     title: "CORDADO",
     image: "/CORDADO.png",
     tags: [
@@ -151,7 +149,7 @@ export const phylums = [
     ],
   },
   {
-    id: 11,
+    id: "cnidario",
     title: "CNIDARIO",
     image: "/CNIDARIO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "RADIADO"],
@@ -162,7 +160,7 @@ export const phylums = [
     ],
   },
   {
-    id: 12,
+    id: "ctenoforo",
     title: "CTENOFORO",
     image: "/CTENOFORO.png",
     tags: ["MULTICELULAR", "EUMETAZOARIO", "RADIADO"],
