@@ -23,7 +23,7 @@ export function oneHandleClickNext({ selected, phase, setPhase }: next) {
     : selected === "BILATERAL"
     ? setPhase("celoma")
     : selected === "RADIAL SECUNDARIA"
-    ? setPhase("equinodermos")
+    ? setPhase("equinodermo")
     : selected === "NULO"
     ? setPhase("acelomados")
     : selected === "PARCIAL"
@@ -31,23 +31,23 @@ export function oneHandleClickNext({ selected, phase, setPhase }: next) {
     : selected === "COMPLETO" && phase === "celoma"
     ? setPhase("celomados")
     : selected === "COMPLETO" && phase === "acelomados"
-    ? setPhase("nemertinos")
+    ? setPhase("nemertino")
     : selected === "INCOMPLETO" && phase === "acelomados"
-    ? setPhase("platelmintos")
+    ? setPhase("platelminto")
     : selected === "EXISTENTE"
-    ? setPhase("acantocefalos")
+    ? setPhase("acantocefalo")
     : selected === "CARENTE"
-    ? setPhase("asquelmintos")
+    ? setPhase("asquelminto")
     : selected === "HENDIDURAS"
     ? setPhase("hendiduras")
     : selected === "EVAGINACIONES"
-    ? setPhase("cordados")
+    ? setPhase("cordado")
     : selected === "MANTO Y CONCHA"
-    ? setPhase("moluscos")
+    ? setPhase("molusco")
     : selected === "HIDROESQUELETO"
-    ? setPhase("anelidos")
+    ? setPhase("anelido")
     : selected === "EXOESQUELETO"
-    ? setPhase("artropodos")
+    ? setPhase("artropodo")
     : selected === "COMPLETO" && phase === "radiados"
     ? setPhase("cnidario")
     : selected === "INCOMPLETO" && phase === "radiados"
