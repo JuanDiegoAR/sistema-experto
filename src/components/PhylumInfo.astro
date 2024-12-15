@@ -11,7 +11,7 @@ const finded = phylums.find((element) => element.title === phylum);
 ---
 
 <section
-  class="flex flex-col w-[80vw] min-h-[570px] rounded-[45px] shadow-stable mb-[77px] p-8 justify-center items-center relative"
+  class="flex flex-col w-[70%] min-h-[466px] rounded-[45px] shadow-stable mb-[40px] p-8 justify-center items-center relative"
 >
   <a
     href="/explore"
@@ -20,23 +20,23 @@ const finded = phylums.find((element) => element.title === phylum);
     <img src="/flecha.svg" alt="" class="w-8 h-8" />
     Volver</a
   >
-  <h2 class="font-bold text-3xl mb-8">
+  <h2 class="font-bold text-xl mb-4">
     {finded?.title}
   </h2>
   <article
-    class="grid grid-cols-phylumInfoGrid justify-center justify-items-center w-full"
+    class="flex flex-row flex-wrap items-center justify-center justify-items-center w-full gap-10"
   >
     <div
       transition:name=`img-${phylum}`
-      class="flex rounded-[45px] shadow-stable w-[360px] h-[400px] items-center justify-center mb-8"
+      class="flex rounded-[45px] shadow-stable w-[240px] h-[260px] items-center justify-center mb-8"
     >
-      <img class="h-[300px] w-[300px]" src={finded?.image} />
+      <img class="h-[200px] w-[200px]" src={finded?.image} />
     </div>
-    <div class="w-[90%]">
-      <div class="grid grid-cols-phylumTagsGrid justify-items-left gap-4 mb-4">
+    <div class="max-w-[500px]">
+      <div class="flex flex-wrap justify-items-left gap-4 mb-4">
         {
           finded?.tags.map((t) => (
-            <p class="rounded-[45px] text-center py-2 bg-[#156703] text-white font-bold select-none">
+            <p class="rounded-[45px] min-w-[150px] text-center py-2 bg-[#156703] text-xs text-white font-bold select-none">
               {t}
             </p>
           ))
@@ -45,7 +45,7 @@ const finded = phylums.find((element) => element.title === phylum);
       <div class="flex flex-col gap-4">
         {
           finded?.description.map((p) => (
-            <p class="text-xl text-left text-pretty">{p}</p>
+            <p class="text-md text-left text-pretty">{p}</p>
           ))
         }
       </div>

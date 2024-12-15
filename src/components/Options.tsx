@@ -8,7 +8,7 @@ interface Props {
 
 export function Options({ phase, updateSelected, selected }: Props) {
   return phase === "celulas" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -29,7 +29,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "tejidos" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -50,7 +50,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "simetria" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -80,7 +80,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "celoma" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -110,7 +110,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "acelomados" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -131,7 +131,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "pseudocelomados" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -152,7 +152,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "celomados" ? (
-    <div className="flex flex-row w-full justify-center gap-20">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -173,7 +173,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
       />
     </div>
   ) : phase === "hendiduras" ? (
-    <div className="grid grid-cols-optionsContentGrid justify-items-center justify-center">
+    <div className="flex flex-wrap justify-center gap-16">
       <OptionCard
         option=""
         image="/logo-udo.webp"
@@ -187,7 +187,7 @@ export function Options({ phase, updateSelected, selected }: Props) {
         option=""
         image="/logo-udo.webp"
         imageAlt="Multicelula"
-        title="HIDROSQUELETO"
+        title="HIDROESQUELETO"
         description="Se basa en la presión del líquido dentro de una cavidad cerrada para mantener la forma y facilitar el movimiento"
         updateSelected={updateSelected}
         selected={selected}

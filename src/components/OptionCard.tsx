@@ -20,17 +20,17 @@ export function OptionCard({
     updateSelected(title);
   };
   return (
-    <article
+    <button
       className={
         selected === title
-          ? "flex flex-col w-[270px] h-[290px] items-center p-5 gap-4 rounded-2xl shadow-emphasis my-10 select-none cursor-pointer duration-500 transition"
-          : "flex flex-col w-[270px] h-[290px] items-center p-5 gap-4 rounded-2xl shadow-stable my-10 select-none cursor-pointer"
+          ? "flex flex-col w-[225px] h-[250px] items-center justify-center p-3 gap-2 rounded-2xl shadow-emphasis min-[890px]:my-10 select-none cursor-pointer duration-500 transition"
+          : "flex flex-col w-[225px] h-[250px] items-center justify-center p-3 gap-2 rounded-2xl shadow-stable min-[890px]:my-10 select-none cursor-pointer"
       }
       onClick={handleClick}
     >
-      <img src={image} alt={imageAlt} className="h-[100px]" />
-      <h1 className="font-semibold text-xl text-center">{title}</h1>
-      <p className="text-left text-pretty">{description}</p>
-    </article>
+      <img src={image} alt={imageAlt} className="h-[75px]" />
+      <h1 className="font-semibold text-lg text-center">{title}</h1>
+      <p className="text-left text-sm text-pretty ">{description}</p>
+    </button>
   );
 }
