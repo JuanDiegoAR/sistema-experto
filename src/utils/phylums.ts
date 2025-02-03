@@ -34,7 +34,7 @@ export const phylums = [
       "Poseen un sistema digestivo completo y un probóscide eversible que usan para capturar presas. ",
       "Son importantes en la cadena alimentaria marina y exhiben gran diversidad de formas y tamaños, adaptados a diferentes hábitats acuáticos.",
     ],
-    answers: [1, 0, 0.66, 1, 1, 0, 0],
+    answers: [1, 0, 0.66, 0.33, 1, 0, 0],
   },
   {
     id: "platelminto",
@@ -46,7 +46,7 @@ export const phylums = [
       "Muchos tienen un sistema digestivo incompleto y carecen de sistema circulatorio y respiratorio, lo que los obliga a depender de la difusión a través de su cuerpo. Pueden ser de vida libre o parásitos, afectando a una amplia variedad de huéspedes.",
       "Algunos platelmintos, como las tenias, son conocidos por causar enfermedades en humanos y otros animales.",
     ],
-    answers: [1, 1, 0, 0.5, 0.5, 0, 0],
+    answers: [1, 0, 0.66, 0.33, 0.5, 0, 0],
   },
   {
     id: "asquelminto",
@@ -58,7 +58,7 @@ export const phylums = [
       "Tienen un cuerpo alargado y no segmentado, con un sistema digestivo completo y una cutícula externa resistente. Su reproducción es generalmente sexual, y muchos nemátodos son importantes en la agricultura, ya sea como plagas o como organismos beneficiosos para el control biológico de otras plagas.",
       "Su adaptabilidad y diversidad son notables.",
     ],
-    answers: [1, 0, 0.5, 0, 1, 0.5, 0],
+    answers: [1, 0, 0.66, 0.66, 1, 0.5, 0],
   },
   {
     //✅
@@ -71,7 +71,7 @@ export const phylums = [
       "Son organismos con un ciclo de vida complejo, que incluye etapas en diferentes hospederos. Carecen de un sistema digestivo propio y absorben nutrientes directamente a través de su tegumento.",
       "Estos parásitos pueden infestar a una variedad de animales, incluidos peces, aves y mamíferos. Su adaptación a la vida parasitaria es altamente especializada y eficiente.",
     ],
-    answers: [1, 0, 1, 1, 0.5, 1, 0],
+    answers: [1, 0, 0.66, 0.66, 0.5, 1, 0],
   },
   {
     //✅
@@ -90,7 +90,7 @@ export const phylums = [
       "Su cuerpo típicamente está dividido en tres partes: la cabeza, una masa visceral que contiene los órganos internos y un pie muscular. Muchos poseen una estructura llamada rádula para alimentarse.",
       "Los moluscos ocupan una amplia variedad de hábitats, desde ambientes marinos hasta terrestres, y son vitales en sus ecosistemas.",
     ],
-    answers: [1, 1, 1, 1, 0, 0, 0],
+    answers: [1, 0, 0.66, 1, 0, 0, 0.25],
   },
   {
     id: "anelido",
@@ -108,7 +108,7 @@ export const phylums = [
       "Poseen un sistema digestivo completo y un sistema circulatorio cerrado. Los anélidos habitan en diversos entornos, desde suelos y aguas dulces hasta océanos.",
       "Su segmentación permite una mayor flexibilidad y movilidad, además de la capacidad de regenerar partes del cuerpo. Desempeñan roles importantes en la aeración del suelo y en cadenas alimentarias.",
     ],
-    answers: [1, 1, 1, 0, 0.5, 0, 0],
+    answers: [1, 0, 0.66, 1, 0, 0, 0.5],
   },
   {
     id: "artropodo",
@@ -126,7 +126,7 @@ export const phylums = [
       "Sus características clave incluyen un exoesqueleto de quitina, un cuerpo segmentado y apéndices articulados.",
       "Los artrópodos habitan casi todos los ambientes terrestres y acuáticos y desempeñan roles cruciales en los ecosistemas, como polinizadores, descomponedores y como parte fundamental de las cadenas alimentarias.",
     ],
-    answers: [1, 0, 1, 0, 1, 0, 1],
+    answers: [1, 0, 0.66, 1, 0, 0, 0.75],
   },
   {
     //✅
@@ -162,7 +162,7 @@ export const phylums = [
       "Estos elementos son fundamentales para su clasificación y pueden aparecer en distintas etapas del ciclo vital de los organismos. Los cordados son un grupo extremadamente diverso que abarca desde pequeños invertebrados acuáticos, como las ascidias, hasta grandes mamíferos terrestres, incluidos los seres humanos.",
       "Esta diversidad muestra su adaptabilidad a diversos hábitats",
     ],
-    answers: [1, 0, 0.5, 0, 1, 1, 0],
+    answers: [1, 0, 0.66, 0, 0, 0, 1],
   },
   {
     //✅
@@ -188,6 +188,6 @@ export const phylums = [
       "Su cuerpo es gelatinoso y transparente, y suelen tener bioluminiscencia. A diferencia de los cnidarios, no poseen cnidocitos, sino coloblastos para capturar presas.",
       "Los ctenóforos juegan un papel importante en las cadenas alimentarias marinas, siendo tanto depredadores como presas. Su belleza y bioluminiscencia hacen de ellos un grupo fascinante y esencial en los ecosistemas oceánicos.",
     ],
-    answers: [1, 0, 0, 0, 1, 0, 0],
+    answers: [1, 0, 0.33, 0, 1, 0, 0],
   },
 ];
