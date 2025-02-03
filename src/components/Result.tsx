@@ -1,11 +1,46 @@
 import { phylums } from "@/utils/phylums";
+import { useState } from "react";
 
 interface props {
   phylum: string;
 }
 
+interface response {
+  accuracyPercentage: number;
+  prediction: string;
+}
+
 export function Result({ phylum }: props) {
+  const [identified, setIdentified] = useState<number>(0);
+
+  const consultIA = async (answers: number[]) => {
+    const body = JSON.stringify({ answers: answers });
+    try {
+      console.log(body);
+      const result = await fetch(
+        "https://phylum-recognition-api.onrender.com/phylum",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: body,
+        }
+      );
+      const data: response = await result.json();
+      const accuracyPercentage = data.accuracyPercentage * 100;
+      setIdentified(accuracyPercentage);
+
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const finded = phylums.find((element) => element.title === phylum);
+  const list = finded?.answers;
+
+  list ? consultIA(list) : 0;
 
   const handleClickMore = () => {
     location.href = `/explore/${finded?.title}`;
@@ -21,9 +56,17 @@ export function Result({ phylum }: props) {
         El organismo que se identificó fue...
       </p>
 
-      <h2 className="flex self-center font-bold text-3xl mb-8 text-[#156703] drop-shadow-md">
+      <h2 className="flex self-center font-bold text-3xl text-[#156703] drop-shadow-md">
         {finded?.title}
       </h2>
+
+      <p className="flex self-center text-xs mb-16 px-8">
+        (Y la lógica lo confirma al
+        <span className=" text-[#156703] ml-1">
+          {identified != 0 ? `${identified} %` : "cargando..."}
+        </span>
+        )
+      </p>
 
       <div className="flex flex-wrap justify-center gap-4 mb-20">
         {finded?.tags.map((t) => (

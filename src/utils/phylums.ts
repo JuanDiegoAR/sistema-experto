@@ -1,5 +1,6 @@
 export const phylums = [
   {
+    //✅
     id: "protozoario",
     title: "PROTOZOARIO",
     image: "/PROTOZOARIO.png",
@@ -8,8 +9,10 @@ export const phylums = [
       "El phylum Protozoario incluye organismos unicelulares eucariotas que se encuentran en ambientes acuáticos y húmedos. Estos organismos son extremadamente diversos y pueden vivir de forma libre o como parásitos.",
       "Tienen diversas formas de locomoción, como flagelos, cilios y seudópodos. Los protozoarios son importantes tanto ecológicamente, como en el ciclo de nutrientes, como médicamente, dado que algunos pueden causar enfermedades como la malaria y la enfermedad del sueño. Su diversidad y adaptabilidad son notables.",
     ],
+    answers: [0, 0, 0, 0, 0, 0, 0],
   },
   {
+    //✅
     id: "porifero",
     title: "PORIFERO",
     image: "/PORIFERO.png",
@@ -19,6 +22,7 @@ export const phylums = [
       "Su cuerpo está formado por poros, canales y cámaras que permiten la circulación del agua, facilitando la alimentación por filtración.",
       "Las esponjas tienen una gran capacidad de regeneración y desempeñan un papel importante en el ecosistema acuático al filtrar grandes cantidades de agua, contribuyendo a la limpieza y el equilibrio del medio ambiente.",
     ],
+    answers: [1, 1, 0, 0, 0, 0, 0],
   },
   {
     id: "nemertino",
@@ -30,6 +34,7 @@ export const phylums = [
       "Poseen un sistema digestivo completo y un probóscide eversible que usan para capturar presas. ",
       "Son importantes en la cadena alimentaria marina y exhiben gran diversidad de formas y tamaños, adaptados a diferentes hábitats acuáticos.",
     ],
+    answers: [1, 0, 0.66, 1, 1, 0, 0],
   },
   {
     id: "platelminto",
@@ -41,6 +46,7 @@ export const phylums = [
       "Muchos tienen un sistema digestivo incompleto y carecen de sistema circulatorio y respiratorio, lo que los obliga a depender de la difusión a través de su cuerpo. Pueden ser de vida libre o parásitos, afectando a una amplia variedad de huéspedes.",
       "Algunos platelmintos, como las tenias, son conocidos por causar enfermedades en humanos y otros animales.",
     ],
+    answers: [1, 1, 0, 0.5, 0.5, 0, 0],
   },
   {
     id: "asquelminto",
@@ -52,8 +58,10 @@ export const phylums = [
       "Tienen un cuerpo alargado y no segmentado, con un sistema digestivo completo y una cutícula externa resistente. Su reproducción es generalmente sexual, y muchos nemátodos son importantes en la agricultura, ya sea como plagas o como organismos beneficiosos para el control biológico de otras plagas.",
       "Su adaptabilidad y diversidad son notables.",
     ],
+    answers: [1, 0, 0.5, 0, 1, 0.5, 0],
   },
   {
+    //✅
     id: "acantocefalo",
     title: "ACANTOCEFALO",
     image: "/ACANTOCEFALO.png",
@@ -63,8 +71,10 @@ export const phylums = [
       "Son organismos con un ciclo de vida complejo, que incluye etapas en diferentes hospederos. Carecen de un sistema digestivo propio y absorben nutrientes directamente a través de su tegumento.",
       "Estos parásitos pueden infestar a una variedad de animales, incluidos peces, aves y mamíferos. Su adaptación a la vida parasitaria es altamente especializada y eficiente.",
     ],
+    answers: [1, 0, 1, 1, 0.5, 1, 0],
   },
   {
+    //✅
     id: "molusco",
     title: "MOLUSCO",
     image: "/MOLUSCO.png",
@@ -80,6 +90,7 @@ export const phylums = [
       "Su cuerpo típicamente está dividido en tres partes: la cabeza, una masa visceral que contiene los órganos internos y un pie muscular. Muchos poseen una estructura llamada rádula para alimentarse.",
       "Los moluscos ocupan una amplia variedad de hábitats, desde ambientes marinos hasta terrestres, y son vitales en sus ecosistemas.",
     ],
+    answers: [1, 1, 1, 1, 0, 0, 0],
   },
   {
     id: "anelido",
@@ -97,6 +108,7 @@ export const phylums = [
       "Poseen un sistema digestivo completo y un sistema circulatorio cerrado. Los anélidos habitan en diversos entornos, desde suelos y aguas dulces hasta océanos.",
       "Su segmentación permite una mayor flexibilidad y movilidad, además de la capacidad de regenerar partes del cuerpo. Desempeñan roles importantes en la aeración del suelo y en cadenas alimentarias.",
     ],
+    answers: [1, 1, 1, 0, 0.5, 0, 0],
   },
   {
     id: "artropodo",
@@ -114,8 +126,10 @@ export const phylums = [
       "Sus características clave incluyen un exoesqueleto de quitina, un cuerpo segmentado y apéndices articulados.",
       "Los artrópodos habitan casi todos los ambientes terrestres y acuáticos y desempeñan roles cruciales en los ecosistemas, como polinizadores, descomponedores y como parte fundamental de las cadenas alimentarias.",
     ],
+    answers: [1, 0, 1, 0, 1, 0, 1],
   },
   {
+    //✅
     id: "equinodermo",
     title: "EQUINODERMO",
     image: "/EQUINODERMO.png",
@@ -130,6 +144,7 @@ export const phylums = [
       "El phylum Equinodermo incluye organismos marinos como estrellas de mar, erizos de mar y pepinos de mar. Se caracterizan por su simetría radial (generalmente pentarradial) y un esqueleto interno formado por placas calcáreas.",
       "Tienen un sistema vascular acuífero que utilizan para la locomoción, alimentación y respiración. Los equinodermos desempeñan roles cruciales en sus ecosistemas, como depredadores, herbívoros y detritívoros.",
     ],
+    answers: [1, 0, 1, 0, 0, 0, 0],
   },
   {
     id: "cordado",
@@ -147,8 +162,10 @@ export const phylums = [
       "Estos elementos son fundamentales para su clasificación y pueden aparecer en distintas etapas del ciclo vital de los organismos. Los cordados son un grupo extremadamente diverso que abarca desde pequeños invertebrados acuáticos, como las ascidias, hasta grandes mamíferos terrestres, incluidos los seres humanos.",
       "Esta diversidad muestra su adaptabilidad a diversos hábitats",
     ],
+    answers: [1, 0, 0.5, 0, 1, 1, 0],
   },
   {
+    //✅
     id: "cnidario",
     title: "CNIDARIO",
     image: "/CNIDARIO.png",
@@ -158,8 +175,10 @@ export const phylums = [
       "Presentan simetría radial y su cuerpo tiene dos capas celulares: ectodermo y endodermo, con una mesoglea gelatinosa en medio. Pueden existir en formas polipoides o medusoides.",
       "Los cnidarios juegan un papel esencial en los ecosistemas marinos, formando estructuras como los arrecifes de coral.",
     ],
+    answers: [1, 0, 0.33, 0, 0.5, 0, 0],
   },
   {
+    //✅
     id: "ctenoforo",
     title: "CTENOFORO",
     image: "/CTENOFORO.png",
@@ -169,5 +188,6 @@ export const phylums = [
       "Su cuerpo es gelatinoso y transparente, y suelen tener bioluminiscencia. A diferencia de los cnidarios, no poseen cnidocitos, sino coloblastos para capturar presas.",
       "Los ctenóforos juegan un papel importante en las cadenas alimentarias marinas, siendo tanto depredadores como presas. Su belleza y bioluminiscencia hacen de ellos un grupo fascinante y esencial en los ecosistemas oceánicos.",
     ],
+    answers: [1, 0, 0, 0, 1, 0, 0],
   },
 ];
